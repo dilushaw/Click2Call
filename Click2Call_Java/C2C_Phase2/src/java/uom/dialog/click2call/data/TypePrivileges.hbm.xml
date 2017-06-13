@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2013 10:35:38 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="uom.dialog.click2call.data.TypePrivileges" table="type_privileges" catalog="click2call">
+        <id name="tpId" type="java.lang.Integer">
+            <column name="tp_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userType" class="uom.dialog.click2call.data.UserType" fetch="select">
+            <column name="type_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="privileges" class="uom.dialog.click2call.data.Privileges" fetch="select">
+            <column name="privilege_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

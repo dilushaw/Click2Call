@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2013 10:35:38 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="uom.dialog.click2call.data.Users" table="users" catalog="click2call">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userType" class="uom.dialog.click2call.data.UserType" fetch="select">
+            <column name="type_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="company" class="uom.dialog.click2call.data.Company" fetch="select">
+            <column name="company_id" not-null="true" />
+        </many-to-one>
+        <property name="userName" type="string">
+            <column name="user_name" length="20" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="20" not-null="true" />
+        </property>
+        <property name="userStatus" type="int">
+            <column name="user_status" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="20" />
+        </property>
+        <property name="fullName" type="string">
+            <column name="full_name" length="100" />
+        </property>
+        <set name="systemHistories" inverse="true">
+            <key>
+                <column name="change_user_id" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.SystemHistory" />
+        </set>
+    </class>
+</hibernate-mapping>

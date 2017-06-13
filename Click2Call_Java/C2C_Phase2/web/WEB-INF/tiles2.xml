@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="base.definition"
+                template="/WEB-INF/jsp/pop_layout.jsp">
+        <put-attribute name="heading" value="" />
+        <put-attribute name="body" value="" />
+    </definition>
+    <definition name="newChargingPlan" extends="base.definition">
+        <put-attribute name="heading" value="Define new charging Plan" />
+        <put-attribute name="body" value="/WEB-INF/jsp/Dialog/newChargingPlan.jsp" />
+    </definition>
+</tiles-definitions>

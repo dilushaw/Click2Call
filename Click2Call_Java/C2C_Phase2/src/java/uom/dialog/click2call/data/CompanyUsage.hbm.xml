@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 23, 2013 12:19:38 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="uom.dialog.click2call.data.CompanyUsage" table="company_usage" catalog="click2call">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="company" class="uom.dialog.click2call.data.Company" fetch="select">
+            <column name="company_id" not-null="true" />
+        </many-to-one>
+        <property name="usedSeconds" type="java.lang.Integer">
+            <column name="used_seconds" precision="15" scale="3" not-null="true" />
+        </property>
+        <property name="resetDate" type="timestamp">
+            <column name="reset_date" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

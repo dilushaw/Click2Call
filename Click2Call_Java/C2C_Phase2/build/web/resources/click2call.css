@@ -1,0 +1,226 @@
+
+#Barcode {
+
+background-color:#E4E4E4;
+width:800px;
+margin: 50px auto 0 auto;
+		
+}
+#Top{
+
+background-color:#FFFFFF;
+width:800px;
+margin:80%;
+}
+
+#HeaderBar {
+background-color: #ae0915;
+border-bottom: 10px solid #996633;
+padding: 10px;
+
+
+}
+
+#wrapper{
+    width: 800px;
+    margin: 10px auto 0 auto;
+    background-color:#E4E4E4;
+
+
+
+}
+
+#footer {
+	font: 80%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	
+	margin: 50px auto 0 auto;
+	padding: 0;
+	color: #333;
+	background-color: #ae0915;
+	width:800px;
+	height:20px;
+	
+	
+
+	
+	
+}
+
+table
+{
+border-collapse:collapse;
+}
+
+#Logos {
+
+background-color: #FFFFFF;
+margin: 3px auto 0 auto;
+height:120px;
+width: 800px;
+padding-bottom: 50px;
+
+}
+#Logos #Dialog {
+    background:url(images/dialog.png) no-repeat;
+    width:130px;
+    padding-top:120px;
+    float:left;
+}
+#Logos #C2CLogo {
+    background:url(images/header.png) no-repeat;
+    width:280px;
+    padding-top:120px;
+    float:right;
+
+}
+
+#banner{
+
+
+}
+
+#Content {
+margin: 30px auto 0 auto;
+
+
+
+}
+
+#mainmenu{
+    background-color: #E4E4E4;
+    font: 95%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    margin: 0px auto 0 auto;
+    width:800px;
+
+}
+
+#menuTable{
+    width:100%;
+    position: inherit;
+    margin: 0px 0px 0 auto;
+}
+/*
+#Menu{
+font: 95%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+margin: 0px auto 0 auto;
+/*background-color:#E4E4E4;*/
+/*border-bottom: 3px solid #ae0915;
+padding-bottom: 30px;
+
+
+
+
+}*/
+/*
+.fillDiv{
+margin: 0px auto 0 auto;
+width:800px;
+background-color: #990033;
+
+}
+*/
+#Menu table{
+border-collapse:collapse;
+width:800px;
+vertical-align: top;
+
+
+}
+
+#menuTable td{
+text-align:center;
+width:120px;
+}
+#mainmenu a{
+
+color:#FFFFFF;
+text-decoration:none;
+
+}
+
+
+#mainmenu a:hover{
+color:#000000;
+
+}
+
+/*#mainmenu a:active{
+color:#990033;
+font-weight:bold;
+
+}*/
+
+
+
+#submenu{
+
+font: 75%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+margin: 0px auto 0 auto;
+background-color:#ae0915;
+border-bottom: 15px solid #E4E4E4 ;
+font-style:italic;
+font-weight:bold;
+color:#FFFFFF;
+
+
+
+
+}
+
+#header{
+padding-bottom: 0px;
+background-color:#FFFFFF;
+
+
+
+
+}
+
+#HeaderTopLinks{
+
+font: 55%/1.45em "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+text-align: right;
+}
+
+
+
+
+
+
+#div-button{
+
+padding:5px;
+}
+
+
+.currentTab{
+    background-color: #ae0915;
+
+}
+
+
+.Tab{
+    background-color: #996633;
+}
+
+
+
+.disabledTextbox{
+  background: none;
+  border: none;
+
+  readonly:true;
+}
+
+.iconImg{
+    cursor:pointer;
+
+}
+
+.button {
+    background-image: url("../images/buttonBG.jpg");
+    border: 1px solid #003C74;
+    color: #333333;
+    font: bold 12px Arial;
+    padding: 2px;
+}

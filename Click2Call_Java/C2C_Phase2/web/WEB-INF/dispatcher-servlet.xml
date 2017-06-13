@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xmlns:tx="http://www.springframework.org/schema/tx"
+
+       xmlns:context="http://www.springframework.org/schema/context"
+       
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+
+       http://www.springframework.org/schema/context
+
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       
+       http://www.springframework.org/schema/mvc
+       
+       http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"
+       
+       >
+           
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+  
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+
+    <bean id="controllerHandlerAdapter" class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+   
+    <mvc:annotation-driven />
+<context:annotation-config />
+    <context:component-scan base-package="controllers"/>
+    <context:component-scan base-package="Scheduler"/>
+    <context:component-scan base-package="uom.dialog.click2call.manager"/>
+    <context:component-scan base-package="uom.dialog.click2call.dao"/>
+    <context:component-scan base-package="uom.dialog.click2call.dto"/>
+    <context:component-scan base-package="uom.dialog.click2call.data"/>
+    <context:component-scan base-package="uom.dialog.click2call.translator"/>
+     <context:component-scan base-package="uom.dialog.click2call.jsondata"/>
+    <context:component-scan base-package="uom.dialog.click2call.utils"/>
+    <context:component-scan base-package="uom.dialog.click2call.charging"/>
+    <!--
+    Most controllers will use the ControllerClassNameHandlerMapping above, but
+    for the index controller we are using ParameterizableViewController, so we must
+    define an explicit mapping for it.
+    -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+         <!--   <props>
+                <prop key="index.htm">indexController</prop>
+            </props>-->
+             <props>
+                 
+<!--                <prop key="agent_dashboard.htm">indexController3</prop>
+                <prop key="reports.htm">indexController4</prop>
+                <prop key="createUser.htm">indexController5</prop>
+
+                <prop key="test.htm">indexController7</prop>
+                <prop key="createAgent.htm">indexController8</prop>
+                <prop key="user_dashboard.htm">indexController9</prop>
+                <prop key="loggeduserscreen.htm">indexController10</prop>
+                <prop key="viewAgent.htm">indexController11</prop>
+                <prop key="viewUser.htm">indexController12</prop>
+                <prop key="viewCompany.htm">indexController13</prop>-->
+                <prop key="my_profile.htm">indexController14</prop>
+<!--                <prop key="editCompany.htm">indexController15</prop>
+                <prop key="editUser.htm">indexController16</prop>
+                <prop key="editAgent.htm">indexController17</prop>-->
+<prop key="sessionExipired.htm">indexController18</prop>
+            </props>
+
+        </property>
+   </bean>
+    
+       <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+       
+    <!--
+    The index controller.
+    -->
+    <!--<bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+    
+    </beans>-->
+   
+
+    
+
+<!--    <bean name="indexController3"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="agent_dashboard" />
+
+    <bean name="indexController4"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="reports" />
+
+    <bean name="indexController5"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="createUser" />
+
+    
+     
+    <bean name="indexController7"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="test" />
+    <bean name="indexController8"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="createAgent" />  
+    <bean name="indexController9"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="user_dashboard" />
+    <bean name="indexController10"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="loggeduserscreen" />
+    <bean name="indexController11"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="viewAgent" />
+    <bean name="indexController12"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="viewUser" />
+    <bean name="indexController13"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="viewCompany" />-->
+
+    <bean name="indexController14"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="my_profile" />
+
+
+
+<!--    <bean name="indexController15"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="editCompany" />
+
+
+    <bean name="indexController16"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="editUser" />
+    <bean name="indexController17"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="editAgent" />      -->
+
+    <bean name="indexController18"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="sessionExipired" /> 
+    <bean
+        class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="order" value="1"/>         
+        <property name="viewClass">
+            <value>
+                org.springframework.web.servlet.view.tiles2.TilesView
+            </value>
+        </property>
+    </bean>
+    <!-- Configuration for tiles  -->
+    <bean id="tilesConfigurer"
+          class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles.xml</value>
+            </list>
+        </property>
+    </bean>
+    
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter" />
+            </list>
+        </property>
+    </bean>
+        
+    <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+        <property name="objectMapper">
+            <ref bean="JacksonObjectMapper" />
+        </property>
+    </bean>
+    
+    <bean id="JacksonObjectMapper" class="org.codehaus.jackson.map.ObjectMapper" />
+    <mvc:interceptors>
+        <bean id="webContentInterceptor" class="org.springframework.web.servlet.mvc.WebContentInterceptor">
+                <property name="cacheSeconds" value="0"/>
+                <property name="useExpiresHeader" value="false"/>
+                <property name="useCacheControlHeader" value="true"/>
+                <property name="useCacheControlNoStore" value="true"/>
+            </bean>     
+        </mvc:interceptors>
+</beans>

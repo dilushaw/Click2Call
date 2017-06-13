@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2013 10:35:38 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="uom.dialog.click2call.data.Agents" table="agents" catalog="click2call">
+        <id name="agentId" type="java.lang.Integer">
+            <column name="agent_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="company" class="uom.dialog.click2call.data.Company" fetch="select">
+            <column name="company_id" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="20" not-null="true" />
+        </property>
+        <property name="number" type="string">
+            <column name="number" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="agentKey" type="string">
+            <column name="agent_key" length="10" not-null="true" unique="true" />
+        </property>
+        <property name="totalMins" type="int">
+            <column name="total_mins" not-null="true" />
+        </property>
+        <property name="usedSeconds" type="java.lang.Integer">
+            <column name="used_seconds" not-null="true" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+        <property name="dateCreated" type="timestamp">
+            <column name="date_created" length="19" />
+        </property>
+        <property name="dateDeleted" type="timestamp">
+            <column name="date_deleted" length="19" />
+        </property>
+        <property name="iframe" type="string">
+            <column name="iframe" length="100" unique="true" />
+        </property>
+        <property name="nextCorrelate" type="int">
+            <column name="next_correlate" not-null="true" />
+        </property>
+        <set name="callses" inverse="true">
+            <key>
+                <column name="agent_id" not-null="true" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.Calls" />
+        </set>
+        <set name="agentUsages" inverse="true">
+            <key>
+                <column name="agent_id" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.AgentUsage" />
+        </set>
+    </class>
+</hibernate-mapping>

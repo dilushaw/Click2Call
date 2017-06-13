@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="click2call"/>
+  <table-filter match-name="users"/>
+  <table-filter match-name="type_privileges"/>
+  <table-filter match-name="blacklist"/>
+  <table-filter match-name="agents"/>
+  <table-filter match-name="calls"/>
+  <table-filter match-name="privileges"/>
+  <table-filter match-name="auth_model"/>
+  <table-filter match-name="company"/>
+  <table-filter match-name="charging_plan"/>
+  <table-filter match-name="user_type"/>
+  <table-filter match-name="charging_type"/>
+  <table-filter match-name="master_data"/>
+  <table-filter match-name="company_usage"/>
+  <table-filter match-name="agent_usage"/>
+  <table-filter match-name="system_history"/>
+</hibernate-reverse-engineering>

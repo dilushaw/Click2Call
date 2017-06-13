@@ -1,0 +1,99 @@
+/* 
+    Document   : error_style
+    Created on : Jun 28, 2013, 3:33:32 PM
+    Author     : Dewmini
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#e404 {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+     /*background: none repeat scroll 0 0 #14121D;*/
+    background: none repeat scroll 0 0 #8A0003;
+    color: #FFFFFF;
+    font: 62.5%/1.4 Georgia,serif;
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+#e404 #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#root {
+}
+#e404 #content {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#content {
+    /*background: url("../images/bg-content-a.jpg") repeat-x scroll 0 0 #8FB7C1;*/
+    background: repeat-x scroll 0 0 #ffffff;
+    width: 100%;
+}
+
+#e404 #content div.outer {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+#content div.outer {
+    background: url("../images/bg-content-b.jpg") no-repeat scroll 50% 0 transparent;
+    width: 100%;
+}
+
+#e404 #error {
+    background: url("../images/header.png") no-repeat scroll 0 0 transparent;
+    color: #333333;
+    margin: 100px auto 0;
+    min-height: 135px;
+    padding: 105px 0 110px 285px;
+    width: 500px;
+}
+
+#e404 #error h1 {
+    margin: 0 0 5px -2px;
+}
+.sIFR-replaced {
+    overflow: hidden;
+    width: 100%;
+}
+.sIFR-replaced {
+    visibility: visible !important;
+}
+h1 {
+    font-size: 3.8em;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #C0C0C0;
+    font: bold 3.4em Georgia,Geneva,serif;
+    margin: 0 0 12px;
+}
+
+p {
+    margin-bottom: 1.25em;
+}
+li, dt, dd, p, th, td, caption {
+    font-size: 1.3em;
+}
+
+a {
+    color: #205F73;
+    text-decoration: underline;
+}
+li *, li p, li li, dt *, dd *, p * {
+    font-size: 1em;
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="base.definition"
+                template="/WEB-INF/jsp/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/jsp/mainmenu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+    </definition>
+
+    <definition name="my_profile" extends="base.definition">
+        <put-attribute name="title" value="My Profile" />
+        <put-attribute name="body" value="/WEB-INF/jsp/my_profile.jsp" />
+    </definition>
+    
+    <definition name="test" extends="base.definition">
+        <put-attribute name="title" value="Create Agent" />
+        <put-attribute name="body" value="/WEB-INF/jsp/test.jsp" />
+    </definition>
+    
+    <definition name="company_dashboard" extends="base.definition">
+        <put-attribute name="title" value="Company Dashboard" />
+        <put-attribute name="body" value="/WEB-INF/jsp/company_dashboard.jsp" />
+    </definition>
+       
+    <definition name="user_dashboard" extends="base.definition">
+        <put-attribute name="title" value="User Dashboard" />
+        <put-attribute name="body" value="/WEB-INF/jsp/user_dashboard.jsp" />
+    </definition>
+    <definition name="loggeduserscreen" extends="base.definition">
+        <put-attribute name="title" value="Click2Call - Home" />
+        <put-attribute name="body" value="/WEB-INF/jsp/loggeduserscreen.jsp" />
+    </definition>
+    <definition name="agent_dashboard" extends="base.definition">
+        <put-attribute name="title" value="Agent Dashboard" />
+        <put-attribute name="body" value="/WEB-INF/jsp/agent_dashboard.jsp" />
+    </definition>
+    <definition name="reports" extends="base.definition">
+        <put-attribute name="title" value="View Reports" />
+        <put-attribute name="body" value="/WEB-INF/jsp/reports.jsp" />        
+    </definition>
+    <definition name="viewComapnyCharges" extends="base.definition">
+        <put-attribute name="title" value="View Company Charges" />
+        <put-attribute name="body" value="/WEB-INF/jsp/Reports/viewComapnyCharges.jsp" />        
+    </definition>
+    
+    <definition name="blacklist" extends="base.definition">
+        <put-attribute name="title" value="View Blacklist" />
+        <put-attribute name="body" value="/WEB-INF/jsp/blacklist.jsp" />        
+    </definition>
+    <definition name="success" extends="base.definition">
+        <put-attribute name="title" value="Success" />
+        <put-attribute name="body" value="/WEB-INF/jsp/success.jsp" />
+    </definition>
+    <definition name="error" extends="base.definition">
+        <put-attribute name="title" value="Error" />
+        <put-attribute name="body" value="/WEB-INF/jsp/error.jsp" />
+    </definition>
+    <!-- Charging Plans Related -->
+    <definition name="allChargingPlans" extends="base.definition">
+        <put-attribute name="title" value="Charging Plans" />
+        <put-attribute name="body" value="/WEB-INF/jsp/allChargingPlans.jsp" />
+    </definition>
+    
+    <!-- Company Reports -->
+    <definition name="companyCalls" extends="base.definition">
+        <put-attribute name="title" value="Company Callss" />
+        <put-attribute name="body" value="/WEB-INF/jsp/companyCalls.jsp" />        
+    </definition>
+    
+    <!-- unauthorized -->
+    <definition name="unauthorized" extends="base.definition">
+        <put-attribute name="title" value="Unauthorized Access!" />
+        <put-attribute name="body" value="/WEB-INF/jsp/unauthorized.jsp" />        
+    </definition>
+    
+
+</tiles-definitions>

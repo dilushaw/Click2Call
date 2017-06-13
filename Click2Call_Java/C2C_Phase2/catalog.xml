@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <nextCatalog catalog="nbproject/private/retriever/catalog.xml"/>
+    <system systemId="file:/D:/LAB/C2C/CGWebService.wsdl" uri="src/conf/xml-resources/web-service-references/CGWebService/wsdl/CGWebService.wsdl"/>
+    <system systemId="http://172.26.1.40:8080/CGWebService?wsdl" uri="src/conf/xml-resources/web-service-references/CGWebService_1/wsdl/172.26.1.40_8080/CGWebService.wsdl"/>
+</catalog>

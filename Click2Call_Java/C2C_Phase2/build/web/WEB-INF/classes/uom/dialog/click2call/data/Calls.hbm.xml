@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2013 10:35:38 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="uom.dialog.click2call.data.Calls" table="calls" catalog="click2call">
+        <id name="callId" type="java.lang.Integer">
+            <column name="call_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="agents" class="uom.dialog.click2call.data.Agents" fetch="select">
+            <column name="agent_id" not-null="true" />
+        </many-to-one>
+        <property name="customerNumber" type="string">
+            <column name="customer_number" length="20" not-null="true" />
+        </property>
+        <property name="startTime" type="timestamp">
+            <column name="start_time" length="19" not-null="true" />
+        </property>
+        <property name="endTime" type="timestamp">
+            <column name="end_time" length="19" />
+        </property>
+        <property name="callCharge" type="java.lang.Double">
+            <column name="call_charge" precision="15" scale="3" />
+        </property>
+        <property name="callCorrelator" type="string">
+            <column name="call_correlator" length="20" not-null="true" unique="true" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2013 10:35:38 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="uom.dialog.click2call.data.AuthModel" table="auth_model" catalog="click2call">
+        <id name="authId" type="java.lang.Integer">
+            <column name="auth_id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="20" not-null="true" unique="true" />
+        </property>
+        <set name="companies" inverse="true">
+            <key>
+                <column name="auth_id" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.Company" />
+        </set>
+    </class>
+</hibernate-mapping>

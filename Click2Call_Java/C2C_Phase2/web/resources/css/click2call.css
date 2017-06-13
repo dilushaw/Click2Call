@@ -1,0 +1,214 @@
+body {
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#707070;
+}
+#wrapper {
+    width:960px;
+    overflow:hidden;
+    _height:100%;
+    margin:auto;
+}
+/* Logo */
+#header{
+    width:960px;
+    margin-top:0px;
+}
+#HeaderTopLinks {
+    color: #404040;
+    font-size: 11px;
+    display:block;
+
+    /*set the div in the top right corner
+    position:absolute;
+    top:0;
+    right:0;
+        float:right;
+        width:560px;*/
+    width:800px;
+    position:relative;
+    text-align: right;
+    vertical-align: top;
+    float:right;
+}
+
+#Logos {
+    height:120px;
+    margin-bottom: 5px;
+}
+#Logos #Dialog {
+    background:url(../images/dialog.png) no-repeat left top;
+    width:130px;
+    padding-top: 83px;
+    float:left;
+}
+#Logos #C2CLogo {
+    background:url(../images/header_c2c.png) no-repeat;
+    /*padding-top:116px;
+    float:right;
+    width: 180px;
+    background-size: 100% auto;
+    margin-bottom: -40px;*/
+    width:180px;
+    padding-top:80px;
+    float:right;
+}
+
+#Content {
+    /*background:url(../images/ash-mid.jpg) repeat-y;*/
+    /*    background:#ffffff;*/
+    overflow:hidden;
+    margin-top:0px;
+    position:relative;
+    margin-bottom: 0px;
+    background-color:#E4E4E4;
+}
+
+#mainmenu{
+    background-color: #E4E4E4;
+    font: 15px "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    width:960px;
+}
+
+#menuTable{
+    margin: 0 0 0 auto;
+    position: inherit;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#menuTable td{
+    text-align:center;
+    width:120px;
+}
+#mainmenu a{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+#mainmenu a:hover{
+    color:#000000;
+}
+
+#submenu{
+
+    background-color: #AE0915;
+    border-bottom: 15px solid #E4E4E4;
+    color: #FFFFFF;
+    font: italic bold 75%/1.45em "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+}
+
+#HeaderBar {
+    background-color: #AE0915;
+    border-bottom: 10px solid #996633;
+    padding: 10px;
+}
+
+.loginacc {
+    background-color: #787777;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+    height: 27px;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.loggingTable{
+    background: url("../images/login_bak.png") bottom left repeat-x;
+}
+
+.button {
+    background-image: url("../images/buttonBG.jpg");
+    border: 1px solid #003C74;
+    color: #333333;
+    font: bold 12px Arial;
+    padding: 2px;
+}
+
+.error{
+    /*font-size:12px;*/
+    padding:2px;
+    margin:0;
+    color: #CC0000;
+}
+
+.button_bk{
+    /*background: linear-gradient(to right, #AC1418 , #996633 100%);*/ 
+
+    /* IE10 */ 
+    background-image: -ms-linear-gradient(left, #AC1418 0%, #996633 100%);
+
+    /* Mozilla Firefox */ 
+    background-image: -moz-linear-gradient(left, #AC1418 0%, #996633 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top, #AC1418 0%, #996633 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AC1418), color-stop(1, #996633));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top, #AC1418 0%, #996633 100%);
+
+    /* Proposed W3C Markup */ 
+    background-image: linear-gradient(top, #AC1418 0%, #996633 100%);
+    color: #FFFFFF;
+    font-size: 90%;
+    height: 30px;
+    font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight:bold;
+    /* button background for IE6, IE7, IE8 */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#AC1418', EndColorStr='#996633'); /* IE6,IE7 */
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#AC1418', EndColorStr='#996633')"; /* IE8 */
+}
+
+#div-button{
+    padding:5px;
+}
+
+
+.currentTab{
+    background-color: #ae0915;
+}
+
+
+.Tab{
+    background-color: #996633;
+}
+
+
+
+.disabledTextbox{
+    background: none;
+    border: none;
+    readonly:true;
+}
+
+.iconImg{
+    cursor:pointer;
+}
+
+
+#footer_bak {
+    width: 960px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0px 0 15px 0;
+    border-top: 1px solid #999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer {
+    background-color:#AE0915;
+    color: #FFFFFF;
+    padding: 2px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: central;
+    font-family: Arial, Helvetica, sans-serif;
+}

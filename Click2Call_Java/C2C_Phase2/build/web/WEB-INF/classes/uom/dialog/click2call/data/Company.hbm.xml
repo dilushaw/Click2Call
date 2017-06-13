@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 8, 2013 10:35:38 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="uom.dialog.click2call.data.Company" table="company" catalog="click2call">
+        <id name="companyId" type="java.lang.Integer">
+            <column name="company_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="authModel" class="uom.dialog.click2call.data.AuthModel" fetch="select">
+            <column name="auth_id" />
+        </many-to-one>
+        <many-to-one name="chargingPlan" class="uom.dialog.click2call.data.ChargingPlan" fetch="select">
+            <column name="plan_id" />
+        </many-to-one>
+        <property name="companyName" type="string">
+            <column name="company_name" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="contactName" type="string">
+            <column name="contact_name" length="50" not-null="true" />
+        </property>
+        <property name="companyStatus" type="int">
+            <column name="company_status" not-null="true" />
+        </property>
+        <property name="maxAgents" type="string">
+            <column name="max_agents" length="10" />
+        </property>
+        <property name="startTime" type="time">
+            <column name="start_time" length="8" />
+        </property>
+        <property name="endTime" type="time">
+            <column name="end_time" length="8" />
+        </property>
+        <property name="contactNumber" type="string">
+            <column name="contact_number" length="20" />
+        </property>
+        <property name="secretKey" type="string">
+            <column name="secret_key" length="10" not-null="true" unique="true" />
+        </property>
+        <property name="usedSeconds" type="java.lang.Integer">
+            <column name="used_seconds" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="allocatedMinutes" type="java.lang.Integer">
+            <column name="allocated_minutes" />
+        </property>
+        <set name="userses" inverse="true">
+            <key>
+                <column name="company_id" not-null="true" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.Users" />
+        </set>
+        <set name="companyUsages" inverse="true">
+            <key>
+                <column name="company_id" not-null="true" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.CompanyUsage" />
+        </set>
+        <set name="blacklists" inverse="true">
+            <key>
+                <column name="company_id" not-null="true" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.Blacklist" />
+        </set>
+        <set name="agentses" inverse="true">
+            <key>
+                <column name="company_id" not-null="true" />
+            </key>
+            <one-to-many class="uom.dialog.click2call.data.Agents" />
+        </set>
+    </class>
+</hibernate-mapping>
